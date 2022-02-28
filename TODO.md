@@ -11,4 +11,10 @@
     *   Guards
         *   Should be complete...
     *   List Comprehension and Lazy Lists
-    
+*   Higher Order Functions
+    *   Explain HOFs
+    *   Show map/foldl
+    *   Currying...?
+*   Own Data
+*   Data Structures
+*   FizzBuzz!
