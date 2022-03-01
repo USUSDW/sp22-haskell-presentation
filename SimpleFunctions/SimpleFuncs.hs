@@ -17,3 +17,15 @@ add2Typed n = n + 2
 --  Given object of type a, return a tuple of two objects of type a
 makeTuple :: a -> (a, a)
 makeTuple givenItem = (givenItem, givenItem)
+
+--  Make a fibonacci function that uses pattern matching
+fib :: Int -> Int
+fib 0 = 1
+fib 1 = 1
+fib n = n * (fib (n - 1))
+
+--  Make a fibonacci function using guards
+guardedFib :: Int -> Int
+guardedFib n
+    | n <= 1    = 1
+    | otherwise = n * (guardedFib (n - 1))
