@@ -1,7 +1,9 @@
 # Notes on Haskell Presentation
 
+**NOTE: Not *all* of the demonstrations have been fully documented in these notes. Some sections might only have bullet points for the time being. These sections will be finished soon.**
+
 ## What Even *Is* Haskell?
-*   Functional programming language inspired by Lambda Calculus and named after Haskell Curry
+Haskell is a general-purpose *purely functional* programming language named after Haskell Curry. This language first appeared in 1990, and has shaped the fields of Mathematics and Computer Science ever since. Haskell has directly influenced many of our modern programming languages. Haskell particularly shines when tasked with solving a problem that is *well defined*. Algorithms written in Haskell can be mathematically proven to be correct given it's lack of side effect and guarantee that output is always reproducable when given select input. Some programs written in Haskell are XMonad--a dynamic window manager for the X Window System--, Pandoc--a tool to convert from one Markup language to another--, and spam filtering at Facebook.
 
 ## How To Use Haskell
 
@@ -55,28 +57,27 @@ You can utilize the REPL.it free online Haskell REPL if you would like to follow
 ## Haskell is "functional"... What does functional programming *mean*?
 It means it works. __*Badum-tss...*__
 
-On a real note, what even *is* functional programming? 
+On a real note, these are the main attributes of functional programming:
 
-*   Functional Programming
-    *   Functional programming is declarative
-        *   State what you want to happen, the computer figures out the rest
-        *   You are able to state the *form* of things rather than *how* to form them
-    *   Construct programs through function application and composition
-    *   No/limited side-effects in purely functional programming
-        *   Data isn't really modified, only copied
-    *   Reproducability! A given set of input should produce the same output *every time*
-    *   Functions are "first class citizens"
-        *   Functions can be passed as arguments, returned or stored in data structures
-    *   Anonymous functions are typically used
-        *   Commonly referred to as "lambda functions"  
-    *   Heavy reliance on higher-order functions
-        *   A function that takes at least one function as an argumnent *or* returns another function as a result 
-        *   Discussed more later...
+*   Functional programming is declarative
+    *   State what you want to happen, the computer figures out the rest
+    *   You are able to state the *form* of things rather than *how* to form them
+*   Construct programs through function application and composition
+*   No/limited side-effects in purely functional programming
+    *   Data isn't really modified, only copied
+*   Reproducability! A given set of input should produce the same output *every time*
+*   Functions are "first class citizens"
+    *   Functions can be passed as arguments, returned or stored in data structures
+*   Anonymous functions are typically used
+    *   Commonly referred to as "lambda functions"
+    *   In Haskell, this takes the form `(\x -> x + 1)`, which is an anonymous function taking single parameter `x` and returns `x + 1` 
+*   Heavy reliance on higher-order functions
+    *   A function that takes at least one function as an argumnent *or* returns another function as a result 
+    *   We will demonstrate these momentarily!
 
 ## Haskell Basics
 
 ### Types
-
 *   Int, String, Boolean, more!
 
 ### Functions
@@ -100,8 +101,7 @@ fib n
 The function above basically reads "If n is less than or equal to 1, `fib n` is `1`. Otherwise, `fib n` is `n * (fib (n -1))`." 
 
 ### List Comrehension And "Lazy Lists"
-...
-
+See [InfiniteLists](./IniniteLists) demo.
 
 ## Higher Order `Fun`ctions In Haskell
 A higher order function is...
@@ -109,14 +109,19 @@ A higher order function is...
 *   map
 *   foldl
 
+See [HigherOrderFuncs](./HigherOrderFuncs/)
+
 ## Defining Own Data And Making Your Own Types
-*   "Dude, where's my methods?"
-*   Card Data 
+*   Card Example!
+See [CardData](./CardData/) 
 
 ## Data Structure Examples In Haskell
 *   Linked List
+    *   See [LinkedList](./LinkedList/)
 *   Binary Tree
+    *   See [BST](./BST)
 
 ## Example Programs
 *   FizzBuzz
+    *   See [FizzBuzz](./FizzBuzz/)
 
