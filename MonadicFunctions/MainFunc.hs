@@ -8,4 +8,5 @@ main = do
     putStrLn "How did we do this?"
     putStrLn "By making a monadic function!"
     putStrLn "We mark this function as having a type `IO` to note that Input/Output happens in this function."
-    putStrLn "
+    putStrLn "Fun fact: every compiled Haskell program is one large IO action."
+    putStrLn "To make our 'purely functional' language 
