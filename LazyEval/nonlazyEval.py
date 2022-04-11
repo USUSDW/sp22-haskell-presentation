@@ -15,6 +15,8 @@ if __name__ == "__main__":
     func1Result = myFunc1()
     func2Result = myFunc2()
     if roll <= 3:
-        func1Result # doesn't really do anything...
+        # We don't really do anything with this value...
+        func1Result     
     else:
-        func2Result # doesn't really do anything...
+        # Same with this one
+        func2Result
