@@ -1,3 +1,5 @@
+module BinaryTree where
+
 data BinaryTree = Null | Node (BinaryTree) Int (BinaryTree)
     deriving (Show, Eq)
 
@@ -26,14 +28,14 @@ removeMin :: BinaryTree -> (BinaryTree, Maybe Int)
 removeMin Null = (Null, Nothing)
 removeMin (Node Null a Null) = (Null, Just a)
 removeMin (Node (Node Null b leftRightSubBT) a rightBT) = (Node leftRightSubBT a rightBT, Just b) 
-removeMin (Node leftBT a _) = (minSubBT, minItem) 
+removeMin (Node leftBT a rightBT) = (Node minSubBT a rightBT, minItem) 
     where
         (minSubBT, minItem) = removeMin leftBT
 
 removeMax :: BinaryTree -> (BinaryTree, Maybe Int)
 removeMax Null = (Null, Nothing)
 removeMax (Node Null a Null) = (Null, Just a)
-removeMax (Node leftBT a (Node Null b rightLeftSubBT)) = (Node leftBT a rightLeftSubBT, Just b) 
-removeMax (Node _ a rightBT) = (maxSubBT, maxItem) 
+removeMax (Node leftBT a (Node rightLeftSubBT b Null)) = (Node leftBT a rightLeftSubBT, Just b) 
+removeMax (Node leftBT a rightBT) = (Node leftBT a maxSubBT, maxItem) 
     where
         (maxSubBT, maxItem) = removeMax rightBT
