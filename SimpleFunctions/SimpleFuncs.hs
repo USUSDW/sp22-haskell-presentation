@@ -29,3 +29,4 @@ guardedFib :: Int -> Int
 guardedFib n
     | n <= 1    = 1
     | otherwise = n * (guardedFib (n - 1))
+

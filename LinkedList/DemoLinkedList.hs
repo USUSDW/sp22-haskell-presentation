@@ -12,4 +12,4 @@ main = do
     putStrLn ("Have newList1 which is list1 with last item removed: " ++ (show newList1))
     putStrLn ("First item was " ++ (show firstItem))
     putStrLn ("Have newList2 which is list1 with first item removed: " ++ (show newList2))
-    
+

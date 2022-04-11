@@ -42,3 +42,4 @@ removeElement (Node a tail) item
 asList :: (LinkedList a) -> [a]
 asList EmptyList = []
 asList (Node item remainder) = [item] ++ asList remainder
+

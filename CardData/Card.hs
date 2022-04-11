@@ -45,3 +45,4 @@ compareCards c1 c2
   | cardScore c1 == cardScore c2 = "The two given cards are " ++ (show c1) ++ "s and are equal"
   | cardScore c1  > cardScore c2 = "First " ++ (show c1) ++ "s is greater than second " ++ (show c2)
   | cardScore c1  < cardScore c2 = "First " ++ (show c1) ++ "s is less than second " ++ (show c2)
+

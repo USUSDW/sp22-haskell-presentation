@@ -14,3 +14,4 @@ doFizzBuzz n = do
 main :: IO ()
 main = do
   doFizzBuzz 100
+
