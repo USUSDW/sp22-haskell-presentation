@@ -1,4 +1,4 @@
-# Notes on Haskell Presentation
+# Learn You (Some) Haskell
 
 ## What Even *Is* Haskell?
 Haskell is a general-purpose *purely functional* programming language named after Haskell Curry. This language first appeared in 1990, and has shaped the fields of Mathematics and Computer Science ever since. Haskell has directly influenced many of our modern programming languages. Haskell particularly shines when tasked with solving a problem that is *well defined*. Algorithms written in Haskell can be mathematically proven to be correct given it's lack of side effects, (general) non-reliance on state, and guarantee that the output is always reproducable when given select input. Some programs written in Haskell are XMonad, a dynamic window manager for the X Window System, Pandoc, a tool to convert from one Markup language to another, and Facebook's spam filtering algorithms.
