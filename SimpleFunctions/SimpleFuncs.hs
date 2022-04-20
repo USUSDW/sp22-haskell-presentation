@@ -18,15 +18,15 @@ add2Typed n = n + 2
 makeTuple :: a -> (a, a)
 makeTuple givenItem = (givenItem, givenItem)
 
---  Make a fibonacci function that uses pattern matching
-fib :: Int -> Int
-fib 0 = 1
-fib 1 = 1
-fib n = n * (fib (n - 1))
+--  Make a factorial function that uses pattern matching
+fac :: Int -> Int
+fac 0 = 1
+fac 1 = 1
+fac n = n * (fac (n - 1))
 
---  Make a fibonacci function using guards
-guardedFib :: Int -> Int
-guardedFib n
+--  Make a factorial function using guards
+guardedFac :: Int -> Int
+guardedFac n
     | n <= 1    = 1
-    | otherwise = n * (guardedFib (n - 1))
+    | otherwise = n * (guardedFac (n - 1))
 

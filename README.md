@@ -91,19 +91,19 @@ On a real note, these are the main attributes of functional programming:
 
 ### Pattern Matching
 Haskell will try to match the patterns you *expect* with as much specificity you give it. Haskell can match literals, data types, and data types contained within data types. You can get kind of crazy with this... 
-*   We see this simple pattern matching demonstrated in the `fib` function in [`SimpleFunctions/SimpleFuncs.hs`](SimpleFunctions/SimpleFuncs.hs)
+*   We see this simple pattern matching demonstrated in the `fac` function in [`SimpleFunctions/SimpleFuncs.hs`](SimpleFunctions/SimpleFuncs.hs)
 
 ### Guards!
-When a pattern is matched, there may exist *other* conditions upon the matched data. If we are wanting to modify the return values of our function based on some *boolean expression*, a guard is perfect. Let us observe a `fib` function utilizing guards. Our fibonacci function will take an integer and return an integer (`Int -> Int`). We will match `fib n`, and based on the result of different boolean expressions based on the value of `n`, we will choose what `fib` should return. **Note:** The `otherwise` keyword in Haskell is shorthand for `True` and aims to improve readability of guard statements.
+When a pattern is matched, there may exist *other* conditions upon the matched data. If we are wanting to modify the return values of our function based on some *boolean expression*, a guard is perfect. Let us observe a `fac` function utilizing guards. Our factorial function will take an integer and return an integer (`Int -> Int`). We will match `fac n`, and based on the result of different boolean expressions based on the value of `n`, we will choose what `fac` should return. **Note:** The `otherwise` keyword in Haskell is shorthand for `True` and aims to improve readability of guard statements.
 
 ```haskell
-fib :: Int -> Int
-fib n
+fac :: Int -> Int
+fac n
     | n <= 1    = 1
-    | otherwise = n * (fib (n - 1)) 
+    | otherwise = n * (fac (n - 1)) 
 ```
 
-The function above basically reads "If n is less than or equal to 1, `fib n` is `1`. Otherwise, `fib n` is `n * (fib (n -1))`." 
+The function above basically reads "If n is less than or equal to 1, `fac n` is `1`. Otherwise, `fac n` is `n * (fac (n - 1))`." 
 
 ### "Impure" Functions, Monads, and More!
 We've had a lot of discussion about Haskell's "purity." Some of you may have started to see some limitations that may arise when our functions are *incapable* of modifying state. "How do I create something useful in this language if I can't *really* modify things or produce output?" The creators of Haskell identified this issue too, and came up with a solution! Their solution was to create Monads.
